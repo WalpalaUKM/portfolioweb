@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design system — Royal Blue + White
+  Light mode: dark navy text on warm white surfaces, royal blue accents.
+  Dark mode: pure-white text on deep navy surfaces, electric blue accents.
+  All colors HSL.
+*/
+
+@layer base {
+  :root {
+    /* Surfaces */
+    --background: 210 40% 99%;
+    --foreground: 222 70% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 70% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 70% 12%;
+
+    /* Brand */
+    --primary: 222 78% 18%;            /* deep royal navy */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 220 90% 56%;       /* electric blue */
+
+    --secondary: 215 60% 96%;
+    --secondary-foreground: 222 70% 14%;
+
+    --muted: 215 40% 95%;
+    --muted-foreground: 220 18% 38%;
+
+    --accent: 220 90% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 30% 88%;
+    --input: 215 30% 88%;
+    --ring: 220 90% 56%;
+
+    --radius: 1rem;
+
+    /* Gradients & shadows */
+    --gradient-primary: linear-gradient(135deg, hsl(222 78% 18%), hsl(220 90% 56%));
+    --gradient-soft: linear-gradient(180deg, hsl(215 60% 98%), hsl(0 0% 100%));
+    --shadow-elegant: 0 20px 50px -20px hsl(222 78% 18% / 0.25);
+    --shadow-glow: 0 0 60px hsl(220 90% 56% / 0.35);
+    --shadow-card: 0 8px 30px -10px hsl(222 70% 12% / 0.12);
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 60% 6%;          /* deep navy */
+    --foreground: 0 0% 100%;           /* pure white */
+
+    --card: 222 50% 9%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 222 55% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 220 90% 60%;            /* electric blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 215 95% 70%;
+
+    --secondary: 222 40% 14%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 222 35% 15%;
+    --muted-foreground: 215 25% 75%;
+
+    --accent: 215 95% 65%;
+    --accent-foreground: 222 60% 6%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 35% 20%;
+    --input: 222 35% 20%;
+    --ring: 220 90% 60%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 60%), hsl(215 95% 70%));
+    --gradient-soft: linear-gradient(180deg, hsl(222 60% 6%), hsl(222 50% 10%));
+    --shadow-elegant: 0 20px 60px -20px hsl(220 90% 60% / 0.4);
+    --shadow-glow: 0 0 80px hsl(220 90% 60% / 0.4);
+    --shadow-card: 0 8px 30px -10px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Figtree', system-ui, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', system-ui, sans-serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-xl bg-background/70 border border-border/60;
+  }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .section-padding {
+    @apply py-20 md:py-28 px-6 md:px-10;
+  }
+}
