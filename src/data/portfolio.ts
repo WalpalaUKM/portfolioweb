@@ -1,5 +1,5 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
+import project1 from "@/assets/1yearproject.jpg";
+import project2 from "@/assets/teafactory.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
@@ -10,9 +10,9 @@ export const profile = {
   faculty: "Faculty of Computing and Technology",
   university: "University of Kelaniya",
   tagline: "Aspiring ICT Undergraduate | UI/UX Designer | Full-Stack Developer | Tech Enthusiast",
-  email: "ulindu.kavmina@example.com",
-  linkedin: "https://linkedin.com/in/ulindu-kavmina",
-  github: "https://github.com/ulindu-kavmina",
+  email: "ukmadduma@gmail.com",
+  linkedin: "https://www.linkedin.com/in/ulindu-kavmina-336b75296/",
+  github: "https://github.com/WalpalaUKM",
 };
 
 export const skills = {

@@ -8,29 +8,44 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import { profile } from "@/data/portfolio";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sending, setSending] = useState(false);
 
   const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
-      toast({ title: "Please fill in all fields", variant: "destructive" });
-      return;
-    }
-    setSending(true);
-    setTimeout(() => {
-      setSending(false);
+  e.preventDefault();
+  setSending(true);
+
+  emailjs
+    .send(
+      "service_jxbb11g",     // 🔴 your Service ID
+      "template_q55btpy",    // 🔴 your Template ID
+      {
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      },
+      "7bEZkQjWfLwf_bhaZ"         // 🔴 your Public Key
+    )
+    .then(() => {
+      alert("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
-      toast({ title: "Message sent!", description: "Thanks for reaching out — I'll get back to you soon." });
-    }, 800);
-  };
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("Failed to send message");
+    })
+    .finally(() => {
+      setSending(false);
+    });
+};
 
   const links = [
     { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
-    { icon: Linkedin, label: "LinkedIn", value: "/ulindu-kavmina", href: profile.linkedin },
-    { icon: Github, label: "GitHub", value: "@ulindu-kavmina", href: profile.github },
+    { icon: Linkedin, label: "LinkedIn", value: "ulindu kavmina", href: profile.linkedin },
+    { icon: Github, label: "GitHub", value: "ulindu kavmina", href: profile.github },
   ];
 
   return (
