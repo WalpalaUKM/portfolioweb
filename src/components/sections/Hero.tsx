@@ -36,7 +36,7 @@ export const Hero = () => {
 
   {/* TAGLINE */}
   <p className="mt-6 text-lg md:text-xl font-medium text-primary max-w-xl leading-relaxed">
-    Aspiring ICT Undergraduate | UI/UX Designer | Full-Stack Developer | Tech Enthusiast | Blogger
+    ICT Undergraduate | UI/UX Designer | Full-Stack Developer | Tech Enthusiast | Blogger
   </p>
 
   {/* BUTTONS */}
