@@ -9,7 +9,7 @@ export const Projects = () => (
     id="projects"
     eyebrow="Projects"
     title="Selected work from coursework and personal builds."
-    subtitle="A mix of software, hardware, and full-stack experiments — each one taught me something new."
+    subtitle=""
   >
     <div className="grid md:grid-cols-2 gap-6">
       {projects.map((p, i) => (

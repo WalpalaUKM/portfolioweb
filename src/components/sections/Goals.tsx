@@ -14,7 +14,7 @@ export const Goals = () => (
     id="goals"
     eyebrow="Future Goals"
     title="My roadmap — from undergrad to industry."
-    subtitle="A clear picture of where I'm headed and the skills I'm investing in to get there."
+    subtitle=""
     className="bg-gradient-soft"
   >
     <div className="relative">

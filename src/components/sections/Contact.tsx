@@ -53,7 +53,7 @@ export const Contact = () => {
       id="contact"
       eyebrow="Contact"
       title="Let's build something great together."
-      subtitle="Whether it's an internship, collaboration or a quick hello — my inbox is always open."
+      subtitle=""
     >
       <div className="grid lg:grid-cols-5 gap-6">
         <motion.div

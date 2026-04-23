@@ -46,12 +46,12 @@ export const skills = {
 export const projects = [
   {
     title: "Smart Home Automation",
-    course: "Embedded Systems",
+    course: "Design Ideation and Creative Development CTEC11203",
     objective: "Design an IoT system to control household appliances via mobile.",
-    tech: ["Arduino", "ESP32", "MQTT", "React Native"],
+    tech: ["Figma"],
     description:
-      "An end-to-end IoT solution with sensor-driven automation, mobile control, and a real-time analytics dashboard.",
-    role: "Hardware lead & full-stack developer",
+      "This project is a smart system that allows farmers,investors and customers connectand share informations about sri lanka agriculture industry.This is mobile app that provides facilities to ",
+    role: "UI/UX designer",
     outcome: "Reduced household energy use by ~22% in pilot testing.",
     image: project1,
     github: "#",
@@ -59,11 +59,11 @@ export const projects = [
   },
   {
     title: "Student Performance Dashboard",
-    course: "Database Systems",
+    course: "Project In Technology CTEC11302",
     objective: "Visualize academic performance trends for faculty insights.",
-    tech: ["React", "Node.js", "PostgreSQL", "Chart.js"],
+    tech: ["Figma","Flutter" ],
     description: "A responsive web dashboard with role-based access and exportable reports.",
-    role: "Frontend developer & UI/UX designer",
+    role: "Developer and UI/UX designer",
     outcome: "Adopted as a teaching aid by two course modules.",
     image: project2,
     github: "#",
@@ -97,20 +97,20 @@ export const projects = [
 
 export const goals = {
   shortTerm: [
-    "Master modern full-stack development (React, Node, TypeScript).",
-    "Complete an industry internship in software or IoT.",
-    "Contribute to at least 3 open-source projects.",
+    "Complete my bachelor's degree with a strong academic performance.",
+    "In the near future I try to join a software company as an junior developer to gain real industry experience.",
+    "Join university or inter university competitions and hackathons to improve my problem-solving skills and gain more experience.",
   ],
   longTerm: [
-    "Become a Software Engineer specializing in IoT & cloud systems.",
-    "Pursue a Master's degree abroad.",
-    "Found a tech startup focused on smart sustainable living.",
+    "Looking ahead to ,I plan to start my master's degree so that i want to get deeper knowledge in the AI and Software Engineering field.",
+    "Over the next five years I aim to join a top software company in Sri Lanka and gain experience in software development.",
+    "Eventually, I aspire to take on leadership roles in the software engineering field as a Tech Lead or Software Architect.",
   ],
   toDevelop: [
-    "Cloud platforms (AWS / GCP)",
-    "Machine Learning fundamentals",
-    "Embedded Linux & RTOS",
-    "Advanced UI/UX research methods",
+    "Software Fundamentals and Best Practices",
+    "Critical Thinking and Problem-Solving",
+    "Research and Academic Writing",
+    "Professional UI/UX Design Principles",
   ],
 };
 
