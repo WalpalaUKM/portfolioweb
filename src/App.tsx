@@ -7,7 +7,6 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import FieldVisits from "./pages/FieldVisits";
 import ClubActivities from "./pages/ClubActivities";
-import Research from "./pages/Research";
 import Certifications from "./pages/Certifications";
 import Achievements from "./pages/Achievements";
 import Reflections from "./pages/Reflections";
@@ -24,7 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/field-visits" element={<FieldVisits />} />
           <Route path="/club-activities" element={<ClubActivities />} />
-          <Route path="/research" element={<Research />} />
+          
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/reflections" element={<Reflections />} />

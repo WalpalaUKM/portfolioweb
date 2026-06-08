@@ -87,9 +87,6 @@ export const Navbar = () => {
             onMouseEnter={() => setMoreOpen(true)}
             onMouseLeave={() => setMoreOpen(false)}
           >
-            <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-full text-foreground/70 hover:text-foreground transition-colors">
-              More <ChevronDown className="w-4 h-4" />
-            </button>
             <AnimatePresence>
               {moreOpen && (
                 <motion.div
@@ -159,19 +156,6 @@ export const Navbar = () => {
                   {s.label}
                 </button>
               ))}
-              <div className="pt-2 mt-2 border-t border-border">
-                <p className="px-4 py-2 text-xs uppercase tracking-wider text-muted-foreground">More</p>
-                {morePages.map((p) => (
-                  <Link
-                    key={p.path}
-                    to={p.path}
-                    onClick={() => setOpen(false)}
-                    className="block px-4 py-3 rounded-xl text-foreground/80 hover:text-primary hover:bg-primary/10 transition-colors"
-                  >
-                    {p.label}
-                  </Link>
-                ))}
-              </div>
             </div>
           </motion.div>
         )}
